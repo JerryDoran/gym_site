@@ -275,6 +275,64 @@
   grid-column: 2 / 3;
 }
 
+/* Email Section ***********************************************************/
+.email {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url('./images/gym-3.jpg') center no-repeat;
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+  padding: 5rem calc((100vw - 1300px) / 2);
+  color: var(--main-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email__content h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 5vw, 3rem);
+  padding: 0 1rem;
+}
+
+.email__content p {
+  text-align: center;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  z-index: 10;
+}
+
+.form__wrap {
+  display: flex;
+}
+
+.form__wrap input {
+  padding: 1rem 1rem;
+  outline: none;
+  width: 450px;
+  height: 70px;
+  border: none;
+  margin-right: 1rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+}
+
 /* Media Queries ***********************************************************/
 @media (max-width: 768px) {
   /* Navbar  */
@@ -378,8 +436,24 @@
     grid-row: 2 / 3;
     grid-column: 1 / 2;
   }
-}
 
+  .form__wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .form__wrap input {
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  button {
+    width: 100%;
+    min-width: 450px;
+  }
+}
 @media (max-width: 1100px) {
   .membership__wrapper {
     flex-direction: column;
@@ -389,5 +463,12 @@
   .membership__card {
     width: 80%;
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  button {
+    width: 100%;
+    min-width: 250px;
   }
 }
