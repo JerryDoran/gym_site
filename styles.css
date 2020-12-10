@@ -333,6 +333,64 @@ form {
   font-size: 1.25rem;
 }
 
+/* Footer Section **********************************************************/
+.footer {
+  padding: 5rem calc((100vw - 1100px) / 2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: var(--main-white);
+  background-color: var(--main-black);
+}
+
+.footer__desc {
+  padding: 0 2rem;
+}
+
+.footer__desc h1 {
+  margin-bottom: 2rem;
+  color: var(--main-red);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.footer__desc p {
+  margin-bottom: 1rem;
+}
+
+#phone {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+}
+
+.footer__title {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: gray;
+  font-size: 14px;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer__link:hover {
+  color: var(--main-red);
+}
+
 /* Media Queries ***********************************************************/
 @media (max-width: 768px) {
   /* Navbar  */
@@ -453,7 +511,13 @@ form {
     width: 100%;
     min-width: 450px;
   }
+
+  /* Footer */
+  .footer__wrapper {
+    grid-template-columns: 1fr;
+  }
 }
+
 @media (max-width: 1100px) {
   .membership__wrapper {
     flex-direction: column;
@@ -470,5 +534,13 @@ form {
   button {
     width: 100%;
     min-width: 250px;
+  }
+
+  .footer__desc {
+    padding: 1rem;
+  }
+
+  .footer__links {
+    padding: 1rem;
   }
 }
